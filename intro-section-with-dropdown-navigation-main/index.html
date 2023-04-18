@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css'
+        integrity='sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap">
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <style></style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="images/logo.svg" alt="" /></div>
+        <menu id="sideMenu">
+            <div class="links">
+                <ul>
+                    <li class="hoverToShow1">
+                        <input type="checkbox" name="features" id="features">
+                        <label for="features">Features <img src="images/icon-arrow-down.svg" alt="" /></label>
+
+                        <div class="drpdwn1">
+                            <ul>
+                                <li><a href="#"><img src="images/icon-todo.svg" alt="">Todo List</a></li>
+                                <li><a href="#"><img src="images/icon-calendar.svg" alt="">Calendar</a></li>
+                                <li><a href="#"><img src="images/icon-reminders.svg" alt="">Reminders</a></li>
+                                <li><a href="#"><img src="images/icon-planning.svg" alt="">Planing</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hoverToShow2">
+                        <input type="checkbox" name="company" id="company">
+                        <label for="company">Company <img class="ico-dwn" src="images/icon-arrow-down.svg"
+                                alt="" /></label>
+
+                        <div class="drpdwn2">
+                            <ul>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <ul class="shit">
+                    <a href="#">Login</a>
+                    <a class="signup" href="#">Register</a>
+                </ul>
+            </div>
+            <!-- <div class="logins">
+                <a href="#">Login</a>
+                <a class="signup" href="#">Register</a>
+            </div> -->
+            <img src="images/icon-close-menu.svg" alt="icon-close-menu" id="closeMenu">
+        </menu>
+        <img src="images/icon-menu.svg" alt="icon-menu" id="openMenu">
+    </nav>
+
+
+    <img class="img-mobile" src="images/image-hero-mobile.png" alt="image-hero" />
+    <section>
+        <div class="content">
+            <h1>Make remote work</h1>
+            <p>
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+            </p>
+            <a href="#">Learn more</a>
+            <div class="client">
+                <img src="images/client-databiz.svg" alt="client-databiz" />
+                <img src="images/client-audiophile.svg" alt="client-audiophile">
+                <img src="images/client-meet.svg" alt="client-meet" />
+                <img src="images/client-maker.svg" alt="client-maker" />
+            </div>
+        </div>
+        <div class="hero">
+            <img class="img-desktop" src="images/image-hero-desktop.png" alt="image-hero" />
+        </div>
+    </section>
+
+    <script>
+        const sideMenu = document.getElementById("sideMenu");
+        const open = document.querySelector("#openMenu");
+        const close = document.querySelector("#closeMenu");
+
+        open.addEventListener("click", () => {
+            sideMenu.style.right = "0";
+            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            document.body.style.transition = "background-color 0.5s ease";
+        });
+
+        function hideMenu() {
+            sideMenu.style.right = "-60%";
+            document.body.style.backgroundColor = "";
+        }
+
+        close.addEventListener("click", hideMenu);
+
+        sideMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", hideMenu);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!sideMenu.contains(event.target) && event.target != open) {
+                hideMenu();
+            }
+        })
+
+        if (window.innerWidth < 745) {
+        }
+
+    </script>
+</body>
+
+</html>
