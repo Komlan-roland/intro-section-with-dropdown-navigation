@@ -23,6 +23,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [intro-section-navigation.netlify.app](intro-section-navigation.netlify.app)
+- Solution Url: [Frontend Mentor](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-8A2BH4BEIL) 
 
 ## My process
 
@@ -36,4 +37,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@komlan_roland](https://www.frontendmentor.io/profile/komlan_roland)
+- Frontend Mentor - [@komlan_roland](https://www.frontendmentor.io/profile/Roland7kt8)
