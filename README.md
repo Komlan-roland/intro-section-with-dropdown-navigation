@@ -22,7 +22,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 ### Links
 
-- Live Site URL: [intro-section-navigation.netlify.app](intro-section-navigation.netlify.app)
+- Live Site URL: [intro-section-navigation.netlify.app](https://intro-section-navigation.netlify.app/)
 - Solution Url: [Frontend Mentor](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-8A2BH4BEIL) 
 
 ## My process
